@@ -1,6 +1,7 @@
 var express = require('express'),
     server = express();
 server.use(express.static(__dirname+'/css'));
+server.use(express.static(__dirname+'/images'));
 server.get('/', function(req, res){
 	res.sendFile('html/index.html', { root: __dirname });
 });
